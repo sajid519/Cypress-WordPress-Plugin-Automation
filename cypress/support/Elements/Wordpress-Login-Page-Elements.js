@@ -1,0 +1,17 @@
+export const WordpressLogiPageElements = {
+     userName: "#user_login",
+     password: "#user_pass",
+     login: "#wp-submit",
+     pluginOption: "#menu-plugins",
+     settingButtonOfPlugin: '[data-slug="ltl-freight-quotes-ups-edition"] > .plugin-title > .row-actions > .settings > a',
+     clientID: "#ups_freight_client_id",
+     clientSecret: "#ups_freight_client_secret",
+     licenseKey: "#ups_freight_setting_licnse_key",
+     testConnectionButton: ".ups_freight_test_connection",
+     successMessage: ".ups_freight_success_message",
+   //  errorMessageOfInvalidLicenseKey: ".ups_freight_error_message",
+     //errorMessageOfInvalidLicenseKey: ".notice notice-error ups_freight_error_message",
+     errorMessageOfInvalidLicenseKey: "div.notice.notice-error.ups_freight_error_message",
+     freightClassCheckboxONTestConnection: ":nth-child(1)> label > input",
+     dimensionClassCheckboxOnTestConnection: ":nth-child(2)> label > input",
+    }
