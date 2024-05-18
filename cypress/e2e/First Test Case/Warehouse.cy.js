@@ -9,7 +9,6 @@ describe("Warehouse", () => {
   });
 
   it("Verify that Warehosue Option should Exist", () => {
-   // cy.visit("https://dev.com/wpqa1/wordpress/wp-admin/admin.php?page=wc-settings&tab=ups_freight_quotes")
     cy.visit("https://qa-sajid-2.alignpx.com/wp-admin/admin.php?page=wc-settings&tab=ups_freight_quotes")
     cy.get(".subsubsub").should("contain", "Warehouses")
   })
@@ -20,19 +19,11 @@ describe("Warehouse", () => {
     cy.visit("https://qa-sajid-2.alignpx.com/wp-admin/admin.php?page=wc-settings&tab=ups_freight_quotes")
     cy.get(".subsubsub").contains("Warehouses").click()
 
-    // Select the table head (thead) of the table
     cy.get('#append_warehouse thead').then(($thead) => {
-      // Find all table headings within the table head
+    
       const headings = $thead.find('th');
-
-      // Store the text content of each table heading in an array
       const headingTexts = headings.map((index, element) => Cypress.$(element).text().trim()).get();
-
-      // List of expected table headings
-      const expectedHeadings = ['City', 'State', 'Zip', 'Country', 'Action']; // Update this with your expected headings
-
-      // Assertion: Check if all expected table headings are present in the single table head row
-      // expect(headingTexts).to.deep.equal(expectedHeadings);
+      const expectedHeadings = ['City', 'State', 'Zip', 'Country', 'Action']; 
       expectedHeadings.forEach((heading) => {
         expect(headingTexts.includes(heading)).to.be.true;
       });
