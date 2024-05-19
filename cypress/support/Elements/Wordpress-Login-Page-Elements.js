@@ -14,4 +14,11 @@ export const WordpressLogiPageElements = {
      errorMessageOfInvalidLicenseKey: "div.notice.notice-error.ups_freight_error_message",
      freightClassCheckboxONTestConnection: ":nth-child(1)> label > input",
      dimensionClassCheckboxOnTestConnection: ":nth-child(2)> label > input",
+     clientIdField: ":nth-child(2) > .forminp",
+     clientSecretField: ":nth-child(3) > .forminp",
+     licenseField: ":nth-child(10) > .forminp",
+     selectElement: "select",
+     pagesNavigation: ".subsubsub",
+     userGuidePage: ".user_guide > :nth-child(1) > a",
+     fdoElement: ".user_guide_fdo",
     }
