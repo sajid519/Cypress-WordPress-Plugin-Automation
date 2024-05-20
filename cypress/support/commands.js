@@ -1,7 +1,5 @@
    Cypress.Commands.add("LoginPage", (username, password) =>{
         cy.session([username,password], ()=>{
-        //   cy.visit("https://dev.com/wpqa1/wordpress/wp-login.php")
-         //  cy.visit("https://qa-sajid-2.alignpx.com/wordpress/wp-login.php")
            cy.visit('https://qa-sajid-2.alignpx.com/wp-admin')
            cy.get("#user_login").type(username)
            cy.get("#user_pass").type(password)

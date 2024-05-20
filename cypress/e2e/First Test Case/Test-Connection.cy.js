@@ -1,12 +1,10 @@
 import { WordpressLoginPageConstants } from "../../support/Constants/Wordpress-Login-Page-Constants.js";
 import { WordpressLogiPageElements } from "../../support/Elements/Wordpress-Login-Page-Elements.js";
-import LoginFunctionality from "../../support/Pages/Wordpress-Login-page.js";
 
 describe ("Wordpress Login", ()=>{
       
       beforeEach(()=>{
           cy.LoginPage("sajid", "7SAB%$lX")
-          cy.visit
       });
 
     context ("Test Connection Page", ()=>{

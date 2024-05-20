@@ -2,41 +2,10 @@ import { WarehousePageElements } from "../Elements/Warehouse-Page.Elements";
 import { WarehousePageConstants } from "../Constants/Warehouse-Page-Constant";
 
 class LoginFunctionality {
-      
-    /*  CreatedWarehouse = () =>{
-        cy.visit("https://qa-sajid-2.alignpx.com/wp-admin/admin.php?page=wc-settings&tab=ups_freight_quotes")
-        cy.get(".subsubsub").contains("Warehouses").click()
-          cy.get("[title='Add Warehouse']").click()
-          cy.get("[name='en_wd_origin_address']").type("320 W. Lanier Ave, Ste 200")
-          cy.get("[name='en_wd_origin_zip']").type("30214")
-          cy.get("[name='en_wd_origin_city']").type("Fayetteville")
-          cy.get("[name='en_wd_origin_state']").type("GA")
-          cy.get("[name='en_wd_origin_country']").type("US")
-          cy.get("[name='en_wd_submit_warehouse']").click()
-          cy.get("#append_warehouse").should("contain", "30214")
-      }
-
-
-      UpdatedWarehouse = () =>{
-        cy.get(".en_wd_warehouse_list_data [title='Edit']").click()
-        cy.wait(2000)
-        cy.get("[name='en_wd_origin_address']").clear().type("3818 W Branch Rd")
-        cy.get("[name='en_wd_origin_zip']").clear().type("14706")
-        cy.get("[name='en_wd_origin_city']").clear().type("Allegany")
-        cy.get("[name='en_wd_origin_state']").clear().type("NY")
-        cy.get("[name='en_wd_origin_country']").type("US")
-        cy.get("[name='en_wd_submit_warehouse']").click()
-        cy.get("#append_warehouse").should("contain", "14706")
-      }
-
-      DeleteWarehouse = () =>{
-          cy.get(".en_wd_warehouse_list_data [title='Delete']").click()
-          cy.get("#append_warehouse tbody").should("not.be.visible")
-      }    */
 
       CreatedWarehouse = () =>{
-        cy.visit("https://qa-sajid-2.alignpx.com/wp-admin/admin.php?page=wc-settings&tab=ups_freight_quotes")
-        cy.get(WarehousePageElements.pagesLink).contains(WarehousePageConstants.warehouseText).click()
+          cy.visit("https://qa-sajid-2.alignpx.com/wp-admin/admin.php?page=wc-settings&tab=ups_freight_quotes")
+          cy.get(WarehousePageElements.pagesLink).contains(WarehousePageConstants.warehouseText).click()
           cy.get(WarehousePageElements.warehouseButton).click()
           cy.get(WarehousePageElements.warehouseAddressField).type(WarehousePageConstants.warehouseAddress)
           cy.get(WarehousePageElements.warehouseZipCodeField).type(WarehousePageConstants.warehouseZip)

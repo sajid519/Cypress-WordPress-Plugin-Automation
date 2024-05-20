@@ -9,8 +9,6 @@ export const WordpressLogiPageElements = {
      licenseKey: "#ups_freight_setting_licnse_key",
      testConnectionButton: ".ups_freight_test_connection",
      successMessage: ".ups_freight_success_message",
-   //  errorMessageOfInvalidLicenseKey: ".ups_freight_error_message",
-     //errorMessageOfInvalidLicenseKey: ".notice notice-error ups_freight_error_message",
      errorMessageOfInvalidLicenseKey: "div.notice.notice-error.ups_freight_error_message",
      freightClassCheckboxONTestConnection: ":nth-child(1)> label > input",
      dimensionClassCheckboxOnTestConnection: ":nth-child(2)> label > input",
